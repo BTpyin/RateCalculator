@@ -6,7 +6,7 @@ target 'RateCalculator' do
   use_frameworks!
 
   # Pods for RateCalculator
-	pod 'Alamofire', '~> 4.5'
+	pod 'Alamofire'
 	pod 'RxSwift',    '~> 4.0'
 	pod 'RxCocoa',    '~> 4.0'
 	pod 'Kingfisher', '~> 4.0'

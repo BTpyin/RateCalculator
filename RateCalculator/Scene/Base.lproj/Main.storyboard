@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPo-Dd-x6t">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="edL-py-xin">
+            <objects>
+                <navigationController id="ga2-dM-rCx" customClass="RootNavigationController" customModule="RateCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7dm-kd-5Jd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rj2-4x-Z5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1838" y="-68"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CES-lH-9Iy">
+            <objects>
+                <tabBarController id="iPo-Dd-x6t" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Wx-sm-9Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qlO-IM-O0J" kind="relationship" relationship="viewControllers" id="AAR-Wn-Jsp"/>
+                        <segue destination="ku2-lr-S3f" kind="relationship" relationship="viewControllers" id="5Pw-4J-Jf5"/>
+                        <segue destination="C32-nT-mjz" kind="relationship" relationship="viewControllers" id="NEQ-Ah-VhP"/>
+                        <segue destination="qGK-81-Lgq" kind="relationship" relationship="viewControllers" id="itb-dm-j2y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afb-XI-Ok5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1043" y="-82"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="QdB-7O-ZEE">
+            <objects>
+                <navigationController id="C32-nT-mjz" customClass="RootCalculatorNavigationController" customModule="RateCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xOg-nI-RkJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="42G-XI-1dh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Zx-FH-d56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="198"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3UP-dn-hql">
+            <objects>
+                <navigationController id="ku2-lr-S3f" customClass="RootCalculatorNavigationController" customModule="RateCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dQF-cJ-b0e"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jOg-c1-Lf2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHr-FW-5Lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-493"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tZy-Yv-xcj">
+            <objects>
+                <navigationController id="qlO-IM-O0J" customClass="RootRateNavigationController" customModule="RateCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hIa-QV-b4c"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gKX-Wf-Aml">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XK-l9-zAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-1187"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="eGQ-lZ-bVg">
+            <objects>
+                <navigationController id="qGK-81-Lgq" customClass="RootSettingNavigationController" customModule="RateCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FjK-0E-qYy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYx-AP-I1m">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpT-22-XzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="974"/>
+        </scene>
+    </scenes>
+</document>
