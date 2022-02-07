@@ -12,7 +12,7 @@ class RootRateNavigationController: BaseNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         router = RootRouter(self)
-        
+        router?.showRate()
         // Do any additional setup after loading the view.
     }
     

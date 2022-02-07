@@ -26,9 +26,7 @@ class NetworkManager {
 
     //hsbc end point
     static let currentRate = "/fxtt-exchange-rates"
-    
-    
-    static let shared = NetworkManager()
+
     static var requestPool = Set<String>()
 
   

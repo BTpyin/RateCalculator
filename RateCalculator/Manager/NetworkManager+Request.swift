@@ -14,7 +14,15 @@ extension NetworkManager{
         return URL(string: domain + path)!
     }
     
-    static func getHSBCExhangeRate() -> Observable<HSBCRate>{
+}
+
+extension NetworkManager :HSBCExchangeRateProtocol{
+    func getHSBCExhangeRate() -> Observable<HSBCRate>{
         return NetworkManager.shared.request(NetworkManager.toPath(domain: NetworkManager.hsbcRateRequestBasePath, NetworkManager.currentRate), type: HSBCRate.self)
     }
+}
+
+
+protocol HSBCExchangeRateProtocol{
+    func getHSBCExhangeRate() -> Observable<HSBCRate>
 }
