@@ -7,19 +7,21 @@
 
 import Foundation
 struct HSBCRate : Codable{
-    var lastUpdateTime: String?
-    var fxttExchangeRates:[FxttExchangeRates]?
+//    var lastUpdateTime: String?
+    let detailRates:[FxttExchangeRates]?
 }
 
 struct FxttExchangeRates:Codable{
-    var ccyCode: String?
-    var ccyDisplayCode: String?
-    var ccyDisplayName: String?
-    var ccyBaseRemark: String?
-    var chartFlag: String?
-    var ttBuyRate: String?
-    var ttSellRate: String?
-    var ccyNameZh: String?
-    var ccyNameCn: String?
-    var ccyNameEn: String?
+    let ccy: String?
+//    var ccyDisplayCode: String?
+    let ccyName: String?
+//    var ccyBaseRemark: String?
+//    var chartFlag: String?
+    let ttBuyRt: String?
+    let ttSellRt: String?
+    let bankBuyRt: String?
+    let bankSellRt: String?
+    let ccyNameZh: String?
+    let ccyNameCn: String?
+    let ccyNameEn: String?
 }

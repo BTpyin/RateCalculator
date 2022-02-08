@@ -19,13 +19,13 @@ enum FailReason: Error {
 }
 
 class NetworkManager {
-    static let hsbcRateRequestBasePath = "https://rbwm-api.hsbc.com.hk/pws-hk-hase-rates-papi-prod-proxy/v1"
+    static let hsbcRateRequestBasePath = "https://rbwm-api.hsbc.com.hk/digital-pws-tools-investments-eapi-prod-proxy/v1"
     static let hkmaRequestBasePath = "https://api.hkma.gov.hk/public/market-data-and-statistics/"
 
     static let imageLink = "http://openweathermap.org/img/wn/"
 
     //hsbc end point
-    static let currentRate = "/fxtt-exchange-rates"
+    static let currentRate = "/investments/exchange-rate"
 
     static var requestPool = Set<String>()
 
@@ -114,7 +114,7 @@ class NetworkManager {
             
             NetworkManager.manager
                 .request(url, method: method, parameters: param, encoding: encoding, headers: headers)
-                .validate(contentType: ["application/json"])
+                .validate(contentType: ["application/json", "*/*"])
                 .validate(statusCode: 200..<300)
                 .response(completionHandler: { dataResponse in
                     

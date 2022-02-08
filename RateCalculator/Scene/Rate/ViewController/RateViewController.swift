@@ -18,23 +18,41 @@ class RateViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var viewModel:RateViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel = RateViewModel()
+        tableView.delegate = self
+        tableView.dataSource = self
+        setUpBinding()
         // Do any additional setup after loading the view.
     }
-
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUpBinding(){
+        viewModel?.output.rateDiplayListBehaviorRelay.subscribe(onNext:{ [weak self]_ in
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
     }
-    */
 
+}
+
+extension RateViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel?.output.rateDiplayListBehaviorRelay.value?.count ?? 0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "RateTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RateTableViewCell else {
+          fatalError("The dequeued cell is not an instance of RateTableViewCell.")
+        }
+        guard let rate = viewModel?.output.rateDiplayListBehaviorRelay.value?[indexPath.row] else { return cell }
+        cell.uiBind(rate: rate)
+//        cell.viewModel.input.albumRelay.accept(album)
+        return cell
+    }
+    
+    
 }

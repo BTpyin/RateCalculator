@@ -22,4 +22,9 @@ class RateTableViewCell: UITableViewCell {
         shadowView.layer.applySketchShadow()
     }
     
+    
+    func uiBind(rate: FxttExchangeRates){
+        countryLabel.text = rate.ccy
+        rateValueLabel.text = rate.ttBuyRt
+    }
 }
