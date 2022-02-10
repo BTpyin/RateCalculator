@@ -39,6 +39,8 @@
 		0E3337D527A0FE4800F473BA /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3337D427A0FE4800F473BA /* EncodableExtension.swift */; };
 		0E3337D727A1344F00F473BA /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3337D627A1344F00F473BA /* ReachabilityHelper.swift */; };
 		0E3337D927A138B600F473BA /* NetworkManager+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3337D827A138B600F473BA /* NetworkManager+Request.swift */; };
+		0E72C9DC27B3B8D80021C2A7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E72C9DB27B3B8D70021C2A7 /* Setting.storyboard */; };
+		0E72C9DE27B3BABE0021C2A7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72C9DD27B3BABE0021C2A7 /* SettingViewController.swift */; };
 		C529602EFB48BF01FC1334A1 /* Pods_RateCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0D01E1F23A8F6934C813DD /* Pods_RateCalculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		0E3337D427A0FE4800F473BA /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		0E3337D627A1344F00F473BA /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		0E3337D827A138B600F473BA /* NetworkManager+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Request.swift"; sourceTree = "<group>"; };
+		0E72C9DB27B3B8D70021C2A7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		0E72C9DD27B3BABE0021C2A7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6D0D01E1F23A8F6934C813DD /* Pods_RateCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA87A24122CF66AA75DA70D /* Pods-RateCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateCalculator.release.xcconfig"; path = "Target Support Files/Pods-RateCalculator/Pods-RateCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		E5FE1F30B6CDFAF9A5D78968 /* Pods-RateCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateCalculator.debug.xcconfig"; path = "Target Support Files/Pods-RateCalculator/Pods-RateCalculator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 		0E3337C3279FE54B00F473BA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				0E72C9DA27B3B8B10021C2A7 /* Setting */,
 				0E333793279EAE4A00F473BA /* LaunchScreen.storyboard */,
 				0E33379C279EB58C00F473BA /* TabBarController.swift */,
 				0E3337A2279EB8DC00F473BA /* ViewModelType.swift */,
@@ -230,6 +235,15 @@
 				0E3337D2279FF55700F473BA /* HSBCRate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0E72C9DA27B3B8B10021C2A7 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				0E72C9DB27B3B8D70021C2A7 /* Setting.storyboard */,
+				0E72C9DD27B3BABE0021C2A7 /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		3D0EC8E3EAF7B28B192E2648 /* Frameworks */ = {
@@ -312,6 +326,7 @@
 			files = (
 				0E333795279EAE4A00F473BA /* LaunchScreen.storyboard in Resources */,
 				0E333792279EAE4A00F473BA /* Assets.xcassets in Resources */,
+				0E72C9DC27B3B8D80021C2A7 /* Setting.storyboard in Resources */,
 				0E3337BE279FB13E00F473BA /* Rate.storyboard in Resources */,
 				0E333790279EAE4700F473BA /* Main.storyboard in Resources */,
 			);
@@ -383,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E72C9DE27B3BABE0021C2A7 /* SettingViewController.swift in Sources */,
 				0E3337D927A138B600F473BA /* NetworkManager+Request.swift in Sources */,
 				0E33378D279EAE4700F473BA /* BaseViewController.swift in Sources */,
 				0E33379D279EB58C00F473BA /* TabBarController.swift in Sources */,

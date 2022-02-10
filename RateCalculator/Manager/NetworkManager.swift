@@ -117,7 +117,6 @@ class NetworkManager {
                 .validate(contentType: ["application/json", "*/*"])
                 .validate(statusCode: 200..<300)
                 .response(completionHandler: { dataResponse in
-                    
                     if enableLoadingIndicator {
                         self?.hideLoadingIndicator(requestId: uuid)
                     }

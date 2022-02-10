@@ -1,18 +1,17 @@
 //
-//  RootSettingNavigationController.swift
+//  SettingViewController.swift
 //  RateCalculator
 //
-//  Created by Bowie Tso on 24/1/2022.
+//  Created by Bowie Tso on 9/2/2022.
 //
 
 import UIKit
 
-class RootSettingNavigationController: BaseNavigationController {
+class SettingViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        router = RootRouter(self)
-        router?.showSetting()
+
         // Do any additional setup after loading the view.
     }
     

@@ -32,4 +32,17 @@ class RootRouter: Router{
         navigationController?.pushViewController(rateViewController, animated: false)
     
     }
+    
+    func showSetting(){
+        guard
+          let settingViewController = UIStoryboard.storyboard(.setting).instantiateViewController(SettingViewController.self) else {
+            return
+        }
+
+        settingViewController.router = self
+        settingViewController.navigationController?.navigationBar.backItem?.hidesBackButton = false
+        settingViewController.hidesBottomBarWhenPushed = false
+        navigationController?.pushViewController(settingViewController, animated: false)
+    
+    }
 }

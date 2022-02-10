@@ -15,6 +15,7 @@ class RateTableViewCell: UITableViewCell {
     @IBOutlet weak var updownImageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var rateValueLabel: UILabel!
+    @IBOutlet weak var bankBuyAtLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,7 @@ class RateTableViewCell: UITableViewCell {
     
     func uiBind(rate: FxttExchangeRates){
         countryLabel.text = rate.ccy
-        rateValueLabel.text = rate.ttBuyRt
+        rateValueLabel.text = rate.getBuyAt() ?? ""
+        bankBuyAtLabel.text = rate.getBankBuyAt() ?? ""
     }
 }

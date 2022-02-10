@@ -18,10 +18,25 @@ struct FxttExchangeRates:Codable{
 //    var ccyBaseRemark: String?
 //    var chartFlag: String?
     let ttBuyRt: String?
-    let ttSellRt: String?
     let bankBuyRt: String?
     let bankSellRt: String?
     let ccyNameZh: String?
     let ccyNameCn: String?
     let ccyNameEn: String?
+    
+    func getBuyAt() -> String?{
+        let inputNumberformatter = NumberFormatter()
+        inputNumberformatter.numberStyle = .decimal
+        inputNumberformatter.maximumFractionDigits = 3
+        let num = inputNumberformatter.number(from: ttBuyRt ?? "") ?? 0
+        return inputNumberformatter.string(from: num)
+    }
+    
+    func getBankBuyAt() -> String?{
+        let inputNumberformatter = NumberFormatter()
+        inputNumberformatter.numberStyle = .decimal
+        inputNumberformatter.maximumFractionDigits = 3
+        let num = inputNumberformatter.number(from: bankBuyRt ?? "") ?? 0
+        return inputNumberformatter.string(from: num)
+    }
 }
